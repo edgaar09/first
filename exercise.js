@@ -15,7 +15,7 @@ array1.pop()
 array1.pop()
 
 for (string in array1) {
-    output += array1[string] + breakLine;
+    output += `* ${array1[string]}`  + breakLine;
 }
 
 array1.push('element1')
