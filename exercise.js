@@ -11,14 +11,12 @@ for(let i=0; i<array.length; i++){
     }
 }
 
+output += "*".repeat(maxChar+2) + breakLine;
 
- for(let i = 0; i<array.length; i++){
-     output += '*' + array[i] 
-      for(let j = 0; j<maxChar-array[j].length; j++){
-         output += '' + breakLine;
-      }
- }
-
+for(let i = 0; i<array.length; i++){
+    output += "*"+array[i]+" ".repeat(maxChar-array[i].length) + "*"+breakLine;
+}
+output += "*".repeat(maxChar+2) + breakLine;
 
 document.getElementById("log").innerHTML=output;
 
