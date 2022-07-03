@@ -1,29 +1,24 @@
-const array1 = ["Hello", "World", "in", "a", "frame"];
+const array = ["Hello", "World", "in", "a", "frame"];
 
 const breakLine = "<br>";
 let output = "";
 
-array1.push('element1')
-array1.push('element2')
+let maxChar = 0;
 
-
-for (element in array1){
-    output +='*';
-}
-output += breakLine;
-array1.pop()
-array1.pop()
-
-for (string in array1) {
-    output += `* ${array1[string]}`  + breakLine;
+for(let i=0; i<array.length; i++){
+    if(maxChar<array[i].length){
+        maxChar = array[i].length
+    }
 }
 
-array1.push('element1')
-array1.push('element2')
 
+ for(let i = 0; i<array.length; i++){
+     output += '*' + array[i] 
+      for(let j = 0; j<maxChar-array[j].length; j++){
+         output += '' + breakLine;
+      }
+ }
 
-for (element in array1){
-    output += "*";
-}
 
 document.getElementById("log").innerHTML=output;
+
